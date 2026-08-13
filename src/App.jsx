@@ -5,7 +5,7 @@ function App() {
     <>
       <section id="center">
         <div>
-          <h1>Salut Adrien...</h1>
+          <h1>Salut Adrien</h1>
         </div>
       </section>
 
