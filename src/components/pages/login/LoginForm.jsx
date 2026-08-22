@@ -1,8 +1,7 @@
 import { useState } from "react";
 
-export default function LoginPage() {
+export default function LoginForm() {
   // state
-  // const [prenom, setPrenom] = useState("");
   const [inputValue, setInputValue] = useState("");
 
   // comportements
@@ -17,22 +16,19 @@ export default function LoginPage() {
   };
 
   // affichage (render)
-
   return (
-    <>
+    <form action="submit" onSubmit={handleSubmit}>
       <h1>Bienvenue chez nous !</h1>
       <h2>Connectez-vous</h2>
       <br />
-      <form action="submit" onSubmit={handleSubmit}>
-        <input
-          value={inputValue}
-          type="text"
-          placeholder="Entrez votre prénom..."
-          required
-          onChange={handleChange}
-        />
-        <button>Accedez à votre espace</button>
-      </form>
-    </>
+      <input
+        value={inputValue}
+        type="text"
+        placeholder="Entrez votre prénom..."
+        required
+        onChange={handleChange}
+      />
+      <button>Accedez à votre espace</button>
+    </form>
   );
 }
