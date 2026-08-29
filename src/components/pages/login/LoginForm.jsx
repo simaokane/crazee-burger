@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function LoginForm() {
   // state
@@ -29,6 +30,7 @@ export default function LoginForm() {
         onChange={handleChange}
       />
       <button>Accedez à votre espace</button>
+      <Link to="/order">Vers OrderPage</Link>
     </form>
   );
 }
