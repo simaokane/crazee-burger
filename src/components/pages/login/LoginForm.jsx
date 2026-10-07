@@ -22,7 +22,7 @@ export default function LoginForm() {
 
   // affichage (render)
   return (
-    <div action="submit" onSubmit={handleSubmit}>
+    <LoginFormStyled action="submit" onSubmit={handleSubmit}>
       <div className="container-text">
         <h1>Bienvenue chez nous !</h1>
         <br />
@@ -40,6 +40,10 @@ export default function LoginForm() {
         />
         <button>Acceder à mon espace</button>
       </div>
-    </div>
+    </LoginFormStyled>
   );
 }
+
+const LoginFormStyled = styled.div`
+  background: green;
+`;
