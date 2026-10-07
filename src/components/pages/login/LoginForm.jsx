@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "./LoginForm.css";
+import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
+import { theme } from "../../../theme";
 
 export default function LoginForm() {
   // state
@@ -21,31 +22,24 @@ export default function LoginForm() {
 
   // affichage (render)
   return (
-    <form action="submit" onSubmit={handleSubmit}>
-      <h1 style={{ color: "red" }}>Bienvenue chez nous !</h1>
-      <br />
-      <h2 className="bonbon">Connectez-vous</h2>
-      <br />
-      <input
-        value={inputValue}
-        type="text"
-        placeholder="Entrez votre prénom..."
-        required
-        onChange={handleChange}
-      />
-      <button>Accedez à votre espace</button>
-    </form>
+    <div action="submit" onSubmit={handleSubmit}>
+      <div className="container-text">
+        <h1>Bienvenue chez nous !</h1>
+        <br />
+        <br />
+        <h2 className="bonbon">Connectez-vous</h2>
+        <br />
+      </div>
+      <div className="cta-container">
+        <input
+          value={inputValue}
+          type="text"
+          placeholder="Entrez votre prénom"
+          required
+          onChange={handleChange}
+        />
+        <button>Acceder à mon espace</button>
+      </div>
+    </div>
   );
 }
-
-/** 4 méthodes pour ajouter du style à un composant
- * 1. inline style
- * 2. object style
- * 3. modules CSS (avec className)
- * 4. global style (index.css)
- */
-
-/** Styled-Components
- * éviter le style de collision (CSS, Sass)
- * éviter nested styling (Sass)
- */
